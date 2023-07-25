@@ -1,33 +1,7 @@
-# Operating System Files
+FROM coding-public-docker.pkg.coding.net/public/docker/openjdk:8
 
-*.DS_Store
-Thumbs.db
-*.sw?
-.#*
-*#
-*~
-*.sublime-*
+COPY ./build/libs/spring-app.jar /root/workspace/spring-app.jar
 
-# Build Artifacts
+CMD ["java", "-jar", "./spring-app.jar"]
 
-.gradle/
-.mvn
-build/
-target/
-bin/
-dependency-reduced-pom.xml
 
-# Eclipse Project Files
-
-.classpath
-.project
-.settings/
-
-# IntelliJ IDEA Files
-
-*.iml
-*.ipr
-*.iws
-*.idea
-
-README.html
